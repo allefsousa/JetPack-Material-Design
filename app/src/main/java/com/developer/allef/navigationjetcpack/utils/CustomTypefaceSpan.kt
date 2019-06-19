@@ -1,4 +1,4 @@
-package com.developer.allef.navigationjetcpack
+package com.developer.allef.navigationjetcpack.utils
 
 import android.graphics.Paint
 import android.graphics.Typeface

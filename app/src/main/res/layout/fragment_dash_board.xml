@@ -1,0 +1,23 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:background="@color/colorPrimary"
+             tools:context="com.developer.allef.navigationjetcpack.navigation.fragments.DashBoardFragment">
+
+    <android.support.design.card.MaterialCardView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardElevation="20dp"
+            android:checkable="true"
+            android:layout_height="250dp" tools:layout_editor_absoluteY="-1dp" tools:layout_editor_absoluteX="0dp">
+            <android.support.v7.widget.AppCompatImageView android:layout_width="match_parent"
+                                                          android:layout_height="match_parent"
+            android:src="@drawable/je"/>
+    </android.support.design.card.MaterialCardView>
+
+
+
+</android.support.constraint.ConstraintLayout>

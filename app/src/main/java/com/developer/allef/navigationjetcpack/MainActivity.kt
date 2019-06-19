@@ -1,6 +1,6 @@
 package com.developer.allef.navigationjetcpack
 
-import android.graphics.Color
+import android.content.Intent
 import android.graphics.Typeface
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -9,7 +9,12 @@ import android.text.Spannable
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.TextView
+import android.widget.Toast
+import com.developer.allef.navigationjetcpack.navigation.BottomNavigationActivity
+import com.developer.allef.navigationjetcpack.utils.CustomTypefaceSpan
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -17,8 +22,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//       this@MainActivity.setSupportActionBar(bottom)
         bottom.replaceMenu(R.menu.appbar_navigation)
+        setSupportActionBar(bottom)
+        bottom.setNavigationOnClickListener {
+            Toast.makeText(this,"Click Navigation Icon",Toast.LENGTH_LONG).show()
+        }
+        floatingActionButt.setOnClickListener {
+            val intent = Intent(this, BottomNavigationActivity::class.java)
+            startActivity(intent)
+        }
+
 
 
         val spannable = SpannableString(titleview.text)
@@ -30,5 +43,25 @@ class MainActivity : AppCompatActivity() {
         titleview.setText(spannable, TextView.BufferType.SPANNABLE)
 
 
+
+
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.appbar_navigation, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+          R.id.navigation_favorite ->{
+              Toast.makeText(this,"Click Navigation Favorite",Toast.LENGTH_LONG).show()
+          }
+            R.id.navigation_home-> {
+                Toast.makeText(this,"Click Navigation Home",Toast.LENGTH_LONG).show()
+            }
+        }
+
+        return false
     }
 }
