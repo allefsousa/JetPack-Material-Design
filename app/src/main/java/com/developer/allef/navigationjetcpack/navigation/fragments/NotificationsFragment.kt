@@ -4,9 +4,11 @@ package com.developer.allef.navigationjetcpack.navigation.fragments
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import com.developer.allef.navigationjetcpack.R
+import kotlinx.android.synthetic.main.fragment_notifications.*
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -28,5 +30,8 @@ class NotificationsFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_notifications, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
+    }
 }
