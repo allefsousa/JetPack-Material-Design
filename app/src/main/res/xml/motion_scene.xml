@@ -3,7 +3,7 @@
         xmlns:motion="http://schemas.android.com/apk/res-auto">
 
     <Transition
-            motion:constraintSetStart="@layout/fragment_notifications"
+            motion:constraintSetStart="@layout/fragment_notifications_motion_start"
             motion:constraintSetEnd="@layout/activity_motion_end"
             motion:duration="1000">
 

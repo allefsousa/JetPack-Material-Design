@@ -10,19 +10,28 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
-                android:name=".navigation.BottomNavigationActivity"
+                android:name=".navigation_component.drawernavigation.NavigationDrawerActivity"
+                android:label="@string/title_activity_navigation_drawer"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name=".navigation_component.bottomnavigation.BottomNavigationActivity"
                 android:label="@string/title_activity_bottom_navigation">
         </activity>
-        <activity android:name=".MainActivity"
-                  android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
-        android:label="Home">
+        <activity
+                android:name=".MainActivity"
+                android:label="Home"
+                android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <meta-data android:name="preloaded_fonts" android:resource="@array/preloaded_fonts"/>
+
+        <meta-data
+                android:name="preloaded_fonts"
+                android:resource="@array/preloaded_fonts"/>
     </application>
 
 </manifest>

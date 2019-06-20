@@ -13,7 +13,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
 import android.widget.Toast
-import com.developer.allef.navigationjetcpack.navigation.BottomNavigationActivity
+import com.developer.allef.navigationjetcpack.navigation_component.bottomnavigation.BottomNavigationActivity
+import com.developer.allef.navigationjetcpack.navigation_component.drawernavigation.NavigationDrawerActivity
 import com.developer.allef.navigationjetcpack.utils.CustomTypefaceSpan
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -25,11 +26,14 @@ class MainActivity : AppCompatActivity() {
         bottom.replaceMenu(R.menu.appbar_navigation)
         setSupportActionBar(bottom)
         bottom.setNavigationOnClickListener {
-            Toast.makeText(this,"Click Navigation Icon",Toast.LENGTH_LONG).show()
+            val intent = Intent(this, NavigationDrawerActivity::class.java)
+            startActivity(intent)
+            finish()
         }
         floatingActionButt.setOnClickListener {
             val intent = Intent(this, BottomNavigationActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
 

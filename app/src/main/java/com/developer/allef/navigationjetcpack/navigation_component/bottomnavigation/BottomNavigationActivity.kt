@@ -1,4 +1,4 @@
-package com.developer.allef.navigationjetcpack.navigation
+package com.developer.allef.navigationjetcpack.navigation_component.bottomnavigation
 
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
@@ -12,11 +12,10 @@ import androidx.navigation.ui.onNavDestinationSelected
 import androidx.navigation.ui.setupWithNavController
 import com.developer.allef.navigationjetcpack.R
 import kotlinx.android.synthetic.main.activity_bottom_navigation.*
-import kotlinx.android.synthetic.main.activity_main.*
 
 class BottomNavigationActivity : AppCompatActivity() {
-    lateinit var navController : NavController
-    lateinit var bottomNavigationView: BottomNavigationView
+    private lateinit var navController : NavController
+    private lateinit var bottomNavigationView: BottomNavigationView
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
@@ -40,7 +39,7 @@ class BottomNavigationActivity : AppCompatActivity() {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
         setNavigationController()
     }
-    fun setNavigationController() {
+    private fun setNavigationController() {
         //Usando a helper class Navigation podemos encontrar o componente do NavController
         //Baseado no NavHostFragment que está hospedado em nosso Layout Principal
         navController = Navigation.findNavController(this, R.id.nav_host_fragment)

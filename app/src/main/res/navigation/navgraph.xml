@@ -2,21 +2,24 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navgraph"
-            app:startDestination="@id/navigation_home">
+            app:startDestination="@id/navigation_home" >
 
     <fragment android:id="@+id/navigation_dashboard"
-              android:name="com.developer.allef.navigationjetcpack.navigation.fragments.DashBoardFragment"
+              android:name="com.developer.allef.navigationjetcpack.navigation_component.fragments.DashBoardFragment"
               android:label="fragment_dash_board" tools:layout="@layout/fragment_dash_board">
     </fragment>
     <fragment android:id="@+id/navigation_home"
-              android:name="com.developer.allef.navigationjetcpack.navigation.fragments.HomeFragment"
+              android:name="com.developer.allef.navigationjetcpack.navigation_component.fragments.HomeFragment"
               android:label="fragment_home" tools:layout="@layout/fragment_home">
     </fragment>
     <fragment android:id="@+id/navigation_notifications"
-              android:name="com.developer.allef.navigationjetcpack.navigation.fragments.NotificationsFragment"
-              android:label="fragment_notifications" tools:layout="@layout/fragment_notifications">
+              android:name="com.developer.allef.navigationjetcpack.navigation_component.fragments.NotificationsFragment"
+              android:label="fragment_notifications" tools:layout="@layout/fragment_notifications_motion_start">
 
     </fragment>
     <activity android:id="@+id/mainActivity" android:name="com.developer.allef.navigationjetcpack.MainActivity"
-              android:label="MainActivity"/>
+              android:label="MainActivity" tools:layout="@layout/activity_main"/>
+    <activity android:id="@+id/navigationDrawerActivity"
+              android:name="com.developer.allef.navigationjetcpack.navigation_component.drawernavigation.NavigationDrawerActivity"
+              android:label="app_bar_navigation_drawer" tools:layout="@layout/app_bar_navigation_drawer"/>
 </navigation>
