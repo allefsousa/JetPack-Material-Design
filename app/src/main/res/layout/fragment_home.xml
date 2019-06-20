@@ -1,8 +1,9 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
              android:background="@color/colorPrimaryDark"
              android:layout_height="match_parent"
+              android:orientation="vertical"
              tools:context="com.developer.allef.navigationjetcpack.navigation_component.fragments.HomeFragment">
     <android.support.design.card.MaterialCardView
             android:id="@+id/card"
@@ -15,7 +16,25 @@
         <android.support.v7.widget.AppCompatImageView android:layout_width="match_parent"
                                                       android:layout_height="match_parent"
                                                       android:src="@drawable/j"/>
+
     </android.support.design.card.MaterialCardView>
+    <android.support.design.button.MaterialButton
+            android:layout_width="250dp"
+            style="@style/materialTheme"
+            android:layout_height="77dp"
+            android:layout_gravity="center"
+            app:backgroundTint="@android:color/black"
+            android:gravity="center"
+            android:id="@+id/move_frag3"
+            app:rippleColor="@color/colorPrimaryDark"
+            android:textColor="@android:color/white"
+            android:paddingRight="30dp"
+            app:cornerRadius="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="Fragment 3"
+            android:textSize="18sp"
+            app:iconSize="50dp"
+            app:icon="@drawable/ic_launcher_foreground"/>
 
 
-</FrameLayout>
+</LinearLayout>

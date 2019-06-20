@@ -6,7 +6,9 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.navArgs
 import com.developer.allef.navigationjetcpack.R
+import kotlinx.android.synthetic.main.fragment_notifications_motion_start.*
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -30,6 +32,11 @@ class NotificationsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        // receive data other activity
+//        val args: HomeFragmentArgs by navArgs()
+//        text_other_view.text = args.data.toString()
+
 
     }
 }

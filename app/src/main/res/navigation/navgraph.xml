@@ -11,6 +11,18 @@
     <fragment android:id="@+id/navigation_home"
               android:name="com.developer.allef.navigationjetcpack.navigation_component.fragments.HomeFragment"
               android:label="fragment_home" tools:layout="@layout/fragment_home">
+        <argument
+                android:name="data"
+                app:argType="integer"
+                android:defaultValue="25000" />
+        <action android:id="@+id/move_frag3"
+                app:destination="@id/navigation_notifications">
+            <argument
+                    android:name="data"
+                    app:argType="integer"
+                    android:defaultValue="28" />
+        </action>
+
     </fragment>
     <fragment android:id="@+id/navigation_notifications"
               android:name="com.developer.allef.navigationjetcpack.navigation_component.fragments.NotificationsFragment"
